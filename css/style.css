@@ -1,0 +1,146 @@
+:root {
+    color-scheme: light dark;
+    --background-color: rgba(39, 41, 43);
+    --text-color: #222;
+    --typing-duration: 2500ms;
+    --characters: 25;
+    --delay: 2000ms;
+    --blink-duration: 800ms;
+    --color-change: 30%;
+  }
+  
+  /* body {
+    background: var(--background-color);
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    font: 1rem "Source Code Pro", monospace;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  } */
+  body {
+    background: var(--background-color);
+    font-family: Helvetica sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    overflow: hidden;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+         -o-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+  
+  main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    width: max-content;
+    position: relative;
+    color: var(--text-color);
+    animation: colorChange var(--typing-duration) infinite alternate;
+  }
+  
+  h1::before,
+  h1::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  
+  h1::before {
+    background: var(--background-color);
+    animation: typing var(--typing-duration) steps(var(--characters)) var(--delay) forwards;
+  }
+  
+  h1::after {
+    width: .2rem;
+    background: var(--text-color);
+    animation: typing var(--typing-duration) steps(var(--characters)) var(--delay) forwards,
+      blink var(--blink-duration) infinite;
+  }
+  
+  @keyframes typing {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+  @keyframes colorChange {
+    0%, 100% {
+      color: black;
+    }
+    50% {
+      color: white;
+    }
+  }
+  
+  header {
+    background-color: rgba(26, 24, 24, 0.533);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .logo,
+  nav a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .logo {
+    font-size: 44px;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  nav a {
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+  .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 15px;
+    color: #eee;
+    font-size: 13px;
+    background-color: rgba(0, 0, 0, .5);
+}
+  
