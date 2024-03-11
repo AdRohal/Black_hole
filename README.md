@@ -1,6 +1,6 @@
 # Dark World Site
 
-Welcome to the Dark World Site! This project features an interactive canvas animation with gravity points.
+Welcome to the Dark World Site! This project features an interactive canvas animation with gravity points..
 
 ## Gravity Point Animation
 
