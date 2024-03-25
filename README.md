@@ -11,7 +11,7 @@ Welcome to the Dark World Site! This project features an interactive canvas anim
 1. Clone the repository:
    \`\`\`bash
    git clone https://github.com/AdRohal/Black_hole.git
-   \`\`\`
+   \`\`\` 
 
 2. Open \`index.html\` in your web browser.
 
